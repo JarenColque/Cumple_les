@@ -22,7 +22,7 @@ const config = {
   ],
   carouselSlides: [
     {
-      src: "images/foto-1.jpg",
+      src: "images/foto-1.jpeg",
       caption: "Por todas las veces que tu sonrisa hizo que el día se sintiera más bonito."
     },
     {

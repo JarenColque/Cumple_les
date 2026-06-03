@@ -74,6 +74,14 @@ let carouselTimer;
 let touchStartX = 0;
 let cloudinarySettings = null;
 let uploadedImages = [];
+let currentLightboxPhoto = null;
+
+const deleteLightboxPhoto = document.createElement("button");
+deleteLightboxPhoto.className = "lightbox-delete";
+deleteLightboxPhoto.type = "button";
+deleteLightboxPhoto.textContent = "Eliminar foto";
+deleteLightboxPhoto.hidden = true;
+lightbox.appendChild(deleteLightboxPhoto);
 
 window.addEventListener("load", async () => {
   await initializeOnlineGallery();
@@ -185,7 +193,7 @@ function renderGallery() {
       <img src="${image.src}" alt="${image.caption}">
       <span>${image.caption}</span>
     `;
-    button.addEventListener("click", () => openLightbox(image.src, image.caption));
+    button.addEventListener("click", () => openLightbox(image));
     galleryGrid.appendChild(button);
   });
 }
@@ -375,10 +383,15 @@ storyCarousel.addEventListener("touchend", (event) => {
   }
 }, { passive: true });
 
-function openLightbox(src, caption) {
-  lightboxImage.src = src;
-  lightboxImage.alt = caption;
-  lightboxCaption.textContent = caption;
+function openLightbox(image) {
+  currentLightboxPhoto = image;
+
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.caption;
+  lightboxCaption.textContent = image.caption;
+
+  deleteLightboxPhoto.hidden = !image.publicId;
+
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden", "false");
 }
@@ -392,6 +405,60 @@ closeLightbox.addEventListener("click", closePhotoPreview);
 lightbox.addEventListener("click", (event) => {
   if (event.target === lightbox) closePhotoPreview();
 });
+
+deleteLightboxPhoto.addEventListener("click", async (event) => {
+  event.stopPropagation();
+  await deleteCurrentPhoto();
+});
+
+async function deleteCurrentPhoto() {
+  if (!currentLightboxPhoto?.publicId) {
+    setUploadStatus("Esta foto no se puede eliminar desde la página.", "error");
+    return;
+  }
+
+  const adminKey = prompt("Escribe la clave para eliminar esta foto:");
+
+  if (!adminKey) return;
+
+  const confirmDelete = confirm("¿Seguro que quieres eliminar esta foto? Esta acción no se puede deshacer.");
+
+  if (!confirmDelete) return;
+
+  deleteLightboxPhoto.disabled = true;
+  deleteLightboxPhoto.textContent = "Eliminando...";
+
+  try {
+    const response = await fetch("/api/gallery", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "x-admin-key": adminKey
+      },
+      body: JSON.stringify({
+        publicId: currentLightboxPhoto.publicId,
+        src: currentLightboxPhoto.src
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error("No se pudo eliminar la foto.");
+    }
+
+    uploadedImages = uploadedImages.filter((photo) => {
+      return photo.publicId !== currentLightboxPhoto.publicId;
+    });
+
+    closePhotoPreview();
+    renderGallery();
+    setUploadStatus("Foto eliminada correctamente.", "success");
+  } catch (error) {
+    setUploadStatus("No se pudo eliminar la foto. Revisa la clave o las variables de Vercel.", "error");
+  } finally {
+    deleteLightboxPhoto.disabled = false;
+    deleteLightboxPhoto.textContent = "Eliminar foto";
+  }
+}
 
 messageButton.addEventListener("click", () => {
   const message = config.surpriseMessages[Math.floor(Math.random() * config.surpriseMessages.length)];

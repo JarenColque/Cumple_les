@@ -12,14 +12,8 @@ const config = {
     "Hoy todo celebra tu existencia, Lesly. Brilla sin miedo.",
     "Que cada deseo que guardas en silencio encuentre su camino hacia ti."
   ],
-  galleryImages: [
-    { src: "images/foto-1.jpeg", caption: "Un recuerdo suave y bonito" },
-    { src: "images/foto-2.jpeg", caption: "Un día para guardar en el corazón" },
-    { src: "images/foto-3.jpeg", caption: "Sonrisas que se quedan" },
-    { src: "images/foto-4.jpeg", caption: "Una noche con magia" },
-    { src: "images/recuerdo-5.svg", caption: "Detalles que brillan" },
-    { src: "images/recuerdo-6.svg", caption: "Momentos que abrazan" }
-  ],
+  galleryImages: [],
+  
   carouselSlides: [
     {
       src: "images/foto-1.jpeg",

@@ -35,7 +35,7 @@ const config = {
     },
     {
       src: "images/foto-4.jpeg",
-      caption: "Por los momentos que se hacen eternos y la necesidad de para el timepo para que no termine."
+      caption: "Por los momentos que se hacen eternos y la necesidad de parar el tiempo para que no termine este momento."
     }
   ]
 };

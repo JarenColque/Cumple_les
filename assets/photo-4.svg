@@ -5,19 +5,23 @@
       <stop offset=".52" stop-color="#74436c"/>
       <stop offset="1" stop-color="#ffc4dc"/>
     </linearGradient>
-    <radialGradient id="m" cx="50%" cy="50%" r="50%">
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
       <stop stop-color="#fff"/>
       <stop offset=".7" stop-color="#fff5c9"/>
       <stop offset="1" stop-color="#fff5c9" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="900" height="1200" rx="58" fill="url(#g)"/>
-  <circle cx="640" cy="240" r="150" fill="url(#m)"/>
+  <rect width="900" height="1200" rx="54" fill="url(#g)"/>
+  <circle cx="640" cy="240" r="150" fill="url(#moon)"/>
   <g fill="#fff" opacity=".78">
-    <circle cx="164" cy="158" r="3"/><circle cx="314" cy="288" r="2"/><circle cx="742" cy="502" r="3"/>
-    <circle cx="520" cy="402" r="2"/><circle cx="246" cy="612" r="3"/><circle cx="710" cy="792" r="2"/>
+    <circle cx="164" cy="158" r="3"/>
+    <circle cx="314" cy="288" r="2"/>
+    <circle cx="742" cy="502" r="3"/>
+    <circle cx="520" cy="402" r="2"/>
+    <circle cx="246" cy="612" r="3"/>
+    <circle cx="710" cy="792" r="2"/>
   </g>
-  <rect x="138" y="314" width="624" height="690" rx="48" fill="#fff" opacity=".2" stroke="#fff" stroke-opacity=".42"/>
-  <text x="450" y="795" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#fff" font-weight="700">Recuerdo 04</text>
-  <text x="450" y="850" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#ffe1ef">Noche mágica</text>
+  <rect x="138" y="314" width="624" height="690" rx="46" fill="#fff" opacity=".2" stroke="#fff" stroke-opacity=".4"/>
+  <text x="450" y="795" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#fff" font-weight="700">Photo 04</text>
+  <text x="450" y="850" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#ffe1ef">Dreamy nights</text>
 </svg>

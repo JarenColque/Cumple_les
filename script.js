@@ -13,10 +13,10 @@ const config = {
     "Que cada deseo que guardas en silencio encuentre su camino hacia ti."
   ],
   galleryImages: [
-    { src: "images/foto-1.jpg", caption: "Un recuerdo suave y bonito" },
-    { src: "images/foto-2.jpg", caption: "Un día para guardar en el corazón" },
-    { src: "images/foto-3.jpg", caption: "Sonrisas que se quedan" },
-    { src: "images/foto-4.jpg", caption: "Una noche con magia" },
+    { src: "images/foto-1.jpeg", caption: "Un recuerdo suave y bonito" },
+    { src: "images/foto-2.jpeg", caption: "Un día para guardar en el corazón" },
+    { src: "images/foto-3.jpeg", caption: "Sonrisas que se quedan" },
+    { src: "images/foto-4.jpeg", caption: "Una noche con magia" },
     { src: "images/recuerdo-5.svg", caption: "Detalles que brillan" },
     { src: "images/recuerdo-6.svg", caption: "Momentos que abrazan" }
   ],
@@ -26,15 +26,15 @@ const config = {
       caption: "Por todas las veces que tu sonrisa hizo que el día se sintiera más bonito."
     },
     {
-      src: "images/foto-3.jpg",
+      src: "images/foto-3.jpeg",
       caption: "Por esos momentos sencillos que, contigo, se vuelven recuerdos enormes."
     },
     {
-      src: "images/foto-2.jpg",
+      src: "images/foto-2.jpeg",
       caption: "Por la forma tan especial en la que dejas luz donde pasas."
     },
     {
-      src: "images/foto-4.jpg",
+      src: "images/foto-4.jpeg",
       caption: "Por los momentos que se hacen eternos y la necesidad de para el timepo para que no termine."
     }
   ]

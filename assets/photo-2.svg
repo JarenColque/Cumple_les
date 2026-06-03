@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="g" x1="1" x2="0" y1="0" y2="1">
+      <stop stop-color="#f3e7ff"/>
+      <stop offset=".55" stop-color="#ffe6f1"/>
+      <stop offset="1" stop-color="#fff8dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" rx="54" fill="url(#g)"/>
+  <g opacity=".9">
+    <path d="M450 132 L478 214 L565 214 L495 264 L522 348 L450 297 L378 348 L405 264 L335 214 L422 214 Z" fill="#f6d48f"/>
+    <path d="M188 400 L204 448 L254 448 L214 477 L230 526 L188 496 L146 526 L162 477 L122 448 L172 448 Z" fill="#fff"/>
+    <path d="M714 520 L732 574 L789 574 L743 607 L760 662 L714 628 L668 662 L685 607 L639 574 L696 574 Z" fill="#fff"/>
+  </g>
+  <rect x="150" y="258" width="600" height="760" rx="50" fill="#fff" opacity=".55"/>
+  <circle cx="450" cy="548" r="210" fill="#c9a7ff" opacity=".5"/>
+  <circle cx="450" cy="548" r="148" fill="#fff" opacity=".7"/>
+  <text x="450" y="840" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#9b6bef" font-weight="700">Photo 02</text>
+  <text x="450" y="895" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#7e6577">Golden little day</text>
+</svg>

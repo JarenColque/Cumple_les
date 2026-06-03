@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="g" x1="1" x2="0" y1="1" y2="0">
+      <stop stop-color="#ffe0ef"/>
+      <stop offset=".52" stop-color="#fff8fb"/>
+      <stop offset="1" stop-color="#cfb5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" rx="58" fill="url(#g)"/>
+  <rect x="120" y="170" width="660" height="840" rx="54" fill="#fff" opacity=".54"/>
+  <path d="M235 565 C310 435 390 430 450 520 C510 430 590 435 665 565 C610 720 515 780 450 850 C385 780 290 720 235 565 Z" fill="#f5a8c8" opacity=".78"/>
+  <circle cx="450" cy="430" r="70" fill="#fff" opacity=".82"/>
+  <text x="450" y="865" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#b46af1" font-weight="700">Recuerdo 06</text>
+  <text x="450" y="920" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#7e6577">Momentos que abrazan</text>
+</svg>

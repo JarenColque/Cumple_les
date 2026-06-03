@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="g" x1="1" x2="0" y1="0" y2="1">
+      <stop stop-color="#f3e7ff"/>
+      <stop offset=".55" stop-color="#ffe6f1"/>
+      <stop offset="1" stop-color="#fff8dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" rx="58" fill="url(#g)"/>
+  <path d="M450 132 L478 214 L565 214 L495 264 L522 348 L450 297 L378 348 L405 264 L335 214 L422 214 Z" fill="#f6d48f"/>
+  <rect x="150" y="258" width="600" height="760" rx="52" fill="#fff" opacity=".58"/>
+  <circle cx="450" cy="548" r="220" fill="#c9a7ff" opacity=".48"/>
+  <circle cx="450" cy="548" r="150" fill="#fff" opacity=".72"/>
+  <text x="450" y="840" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#9b6bef" font-weight="700">Recuerdo 02</text>
+  <text x="450" y="895" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#7e6577">Un día bonito</text>
+</svg>

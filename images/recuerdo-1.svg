@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#fff7fb"/>
+      <stop offset=".55" stop-color="#ffd4e7"/>
+      <stop offset="1" stop-color="#cdb2ff"/>
+    </linearGradient>
+    <filter id="sombra"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#8a3b64" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="900" height="1200" rx="58" fill="url(#g)"/>
+  <circle cx="730" cy="180" r="170" fill="#fff" opacity=".44"/>
+  <circle cx="210" cy="990" r="230" fill="#fff" opacity=".34"/>
+  <g filter="url(#sombra)">
+    <rect x="145" y="176" width="610" height="790" rx="44" fill="#fff" opacity=".64"/>
+    <rect x="190" y="230" width="520" height="550" rx="34" fill="#f8b8d4"/>
+    <path d="M218 742 C312 612 405 678 490 576 C574 477 657 525 708 438 L708 782 L218 782 Z" fill="#fff4fa" opacity=".88"/>
+    <circle cx="610" cy="318" r="74" fill="#fff3ba"/>
+  </g>
+  <text x="450" y="872" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#d95c91" font-weight="700">Recuerdo 01</text>
+  <text x="450" y="930" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#7e6577">Reemplaza esta foto</text>
+</svg>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8d7e9">
+  <title>Feliz Cumpleaños Lesly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Cargando sorpresa de cumpleaños">
+    <div class="loader-ring"></div>
+    <p>Preparando una sorpresa para Lesly...</p>
+  </div>
+
+  <div class="custom-cursor" id="customCursor"></div>
+  <canvas class="confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
+  <div class="ambient-hearts" id="ambientHearts" aria-hidden="true"></div>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Reproducir o pausar música">
+    <span class="icon">&#9834;</span>
+    <span class="music-text">Reproducir música</span>
+  </button>
+  <audio id="birthdayMusic" loop preload="none">
+    <!-- Para cambiar la música, coloca tu archivo en /assets/ y actualiza esta ruta. Ejemplo: assets/musica.mp3 -->
+    <source src="" type="audio/mpeg">
+  </audio>
+
+  <!-- Pantalla principal de bienvenida -->
+  <header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="orb orb-one"></span>
+      <span class="orb orb-two"></span>
+      <span class="orb orb-three"></span>
+    </div>
+    <nav class="top-nav" aria-label="Secciones de cumpleaños">
+      <a href="#carta">Carta</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#carrusel">Momentos</a>
+      <a href="#historia">Historia</a>
+      <a href="#final">Final</a>
+    </nav>
+    <section class="hero-content reveal">
+      <p class="eyebrow">Una sorpresa digital hecha con cariño</p>
+      <h1>Feliz Cumpleaños Lesly <span>&#10084;&#65039;</span></h1>
+      <p class="hero-copy">
+        Que tus 20 lleguen con magia, amor bonito, sueños enormes y momentos que se queden guardados en el corazón.
+      </p>
+      <button class="primary-button" id="openSurprise">
+        <span>Abrir Sorpresa</span>
+        <span class="button-icon">&#10022;</span>
+      </button>
+    </section>
+    <a class="scroll-hint" href="#carta" aria-label="Ir a la carta">
+      <span></span>
+      Desliza
+    </a>
+  </header>
+
+  <main>
+    <!-- Carta emocional con efecto de escritura -->
+    <section class="section letter-section" id="carta">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Desde el corazón</p>
+        <h2>Una carta para Lesly</h2>
+      </div>
+      <article class="glass-card letter-card reveal">
+        <div class="letter-stamp">20</div>
+        <p class="script-title">Querida Lesly,</p>
+        <p id="typewriterText" class="typewriter" data-message="Hoy cumples 20 años, y quiero que sepas que tu vida merece celebrarse con todo el amor del mundo. Tienes una luz muy tuya: una mezcla de ternura, fuerza, alegría y magia que hace que las personas a tu alrededor se sientan afortunadas de conocerte. Ojalá esta nueva etapa te encuentre sonriendo más, soñando sin miedo, recibiendo amor bonito y descubriendo todo lo increíble que todavía está esperando por ti. Feliz cumpleaños, Lesly. Que este año sea tan especial como tú."></p>
+      </article>
+    </section>
+
+    <!-- Galería escalable: agrega fotos en /images/ y registra sus nombres en script.js -->
+    <section class="section gallery-section" id="galeria">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Recuerdos que brillan</p>
+        <h2>Galería de fotos</h2>
+      </div>
+      <div class="upload-card glass-card reveal">
+        <div>
+          <p class="eyebrow">Sube nuevos recuerdos</p>
+          <h3>Agregar fotos para Lesly</h3>
+          <p>Selecciona una o varias fotos, escribe una frase bonita y guárdalas en la galería.</p>
+        </div>
+        <div class="upload-controls">
+          <label class="file-picker" for="photoInput">
+            <span>Elegir fotos</span>
+            <input id="photoInput" type="file" accept="image/*" multiple>
+          </label>
+          <input id="photoCaption" type="text" maxlength="90" placeholder="Frase para estas fotos">
+          <button class="secondary-button upload-button" id="uploadButton" type="button">
+            <span>Subir a la galería</span>
+            <span>&#10024;</span>
+          </button>
+        </div>
+        <p class="upload-status" id="uploadStatus">Cuando esté desplegado en Vercel, esta sección guardará fotos con Cloudinary y Atlas.</p>
+      </div>
+      <div class="gallery-grid reveal" id="galleryGrid" aria-label="Galería de recuerdos de Lesly"></div>
+    </section>
+
+    <!-- Carrusel automático e interactivo -->
+    <section class="section carousel-section" id="carrusel">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Momentos para volver a sentir</p>
+        <h2>Momentos Bonitos con Lesly</h2>
+      </div>
+      <div class="story-carousel reveal" id="storyCarousel">
+        <button class="carousel-btn prev" id="prevPhoto" aria-label="Momento anterior">&lsaquo;</button>
+        <div class="carousel-window">
+          <div class="carousel-track" id="carouselTrack"></div>
+        </div>
+        <button class="carousel-btn next" id="nextPhoto" aria-label="Momento siguiente">&rsaquo;</button>
+        <div class="carousel-dots" id="carouselDots" aria-label="Indicadores del carrusel"></div>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo emocional -->
+    <section class="section timeline-section" id="historia">
+      <div class="section-heading reveal">
+        <p class="eyebrow">La historia hasta hoy</p>
+        <h2>20 años de momentos especiales</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <p class="timeline-date">Capítulo 01</p>
+          <h3>Cuando empezó su luz</h3>
+          <p>Desde el inicio, Lesly llegó para llenar la vida de ternura, sonrisas y pequeños milagros.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <p class="timeline-date">Creciendo</p>
+          <h3>Aprendiendo a brillar a su manera</h3>
+          <p>Cada risa, cada reto y cada sueño fueron construyendo esa forma tan bonita que tiene de ser ella.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <p class="timeline-date">Hoy</p>
+          <h3>Los 20 le quedan preciosos</h3>
+          <p>Empieza una nueva etapa llena de posibilidades, amor propio, experiencias y recuerdos inolvidables.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección interactiva con mensajes aleatorios -->
+    <section class="section magic-section">
+      <div class="counter-card glass-card reveal">
+        <p class="eyebrow">Toda una era de brillo</p>
+        <h2><span id="ageCounter">0</span> años siendo increíble &#10024;</h2>
+        <p>Veinte años de sonrisas, sueños, ternura, fuerza y toda esa magia que hace única a Lesly.</p>
+      </div>
+      <div class="surprise-card glass-card reveal">
+        <h2>Un mensajito para ti</h2>
+        <p id="randomMessage">Presiona el botón y deja que aparezca una frase hecha para Lesly.</p>
+        <button class="secondary-button" id="messageButton">
+          <span>Presiona para una sorpresa &#10024;</span>
+          <span>&#9825;</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Final cinematográfico -->
+    <section class="finale" id="final">
+      <div class="star-field" aria-hidden="true"></div>
+      <div class="finale-content reveal">
+        <p class="eyebrow">Un último deseo</p>
+        <h2>Te mereces el mundo, Lesly &#127800;</h2>
+        <p>
+          Que esta nueva vuelta al sol te regale paz, amor bonito, sueños cumplidos y una vida que se sienta cada vez más tuya.
+        </p>
+        <a class="primary-button" href="#top">
+          <span>Vivir la sorpresa otra vez</span>
+          <span class="button-icon">&uarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Vista ampliada de la foto">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Cerrar foto">&times;</button>
+    <img id="lightboxImage" src="images/recuerdo-1.svg" alt="Recuerdo seleccionado">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

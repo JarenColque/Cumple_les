@@ -13,28 +13,28 @@ const config = {
     "Que cada deseo que guardas en silencio encuentre su camino hacia ti."
   ],
   galleryImages: [
-    { src: "images/recuerdo-1.svg", caption: "Un recuerdo suave y bonito" },
-    { src: "images/recuerdo-2.svg", caption: "Un día para guardar en el corazón" },
-    { src: "images/recuerdo-3.svg", caption: "Sonrisas que se quedan" },
-    { src: "images/recuerdo-4.svg", caption: "Una noche con magia" },
+    { src: "images/foto-1.jpg", caption: "Un recuerdo suave y bonito" },
+    { src: "images/foto-2.jpg", caption: "Un día para guardar en el corazón" },
+    { src: "images/foto-3.jpg", caption: "Sonrisas que se quedan" },
+    { src: "images/foto-4.jpg", caption: "Una noche con magia" },
     { src: "images/recuerdo-5.svg", caption: "Detalles que brillan" },
     { src: "images/recuerdo-6.svg", caption: "Momentos que abrazan" }
   ],
   carouselSlides: [
     {
-      src: "images/recuerdo-1.svg",
+      src: "images/foto-1.jpg",
       caption: "Por todas las veces que tu sonrisa hizo que el día se sintiera más bonito."
     },
     {
-      src: "images/recuerdo-3.svg",
+      src: "images/foto-3.jpg",
       caption: "Por esos momentos sencillos que, contigo, se vuelven recuerdos enormes."
     },
     {
-      src: "images/recuerdo-2.svg",
+      src: "images/foto-2.jpg",
       caption: "Por la forma tan especial en la que dejas luz donde pasas."
     },
     {
-      src: "images/recuerdo-4.svg",
+      src: "images/foto-4.jpg",
       caption: "Por los momentos que se hacen eternos y la necesidad de para el timepo para que no termine."
     }
   ]

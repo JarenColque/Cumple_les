@@ -6,10 +6,10 @@
       <stop offset="1" stop-color="#f2e6ff"/>
     </linearGradient>
   </defs>
-  <rect width="900" height="1200" rx="54" fill="url(#g)"/>
-  <rect x="128" y="176" width="644" height="850" rx="42" fill="#fff" opacity=".56"/>
-  <path d="M450 356 C390 250 238 286 246 414 C253 535 395 609 450 675 C505 609 647 535 654 414 C662 286 510 250 450 356 Z" fill="#e768a0" opacity=".82"/>
-  <path d="M302 242 C344 168 410 178 450 246 C490 178 556 168 598 242" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".8"/>
-  <text x="450" y="840" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#d95c91" font-weight="700">Photo 03</text>
-  <text x="450" y="895" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#7e6577">Sweet moments</text>
+  <rect width="900" height="1200" rx="58" fill="url(#g)"/>
+  <rect x="128" y="176" width="644" height="850" rx="44" fill="#fff" opacity=".58"/>
+  <path d="M450 356 C390 250 238 286 246 414 C253 535 395 609 450 675 C505 609 647 535 654 414 C662 286 510 250 450 356 Z" fill="#e768a0" opacity=".84"/>
+  <path d="M302 242 C344 168 410 178 450 246 C490 178 556 168 598 242" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".82"/>
+  <text x="450" y="840" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#d95c91" font-weight="700">Recuerdo 03</text>
+  <text x="450" y="895" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#7e6577">Sonrisas especiales</text>
 </svg>

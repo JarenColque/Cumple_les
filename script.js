@@ -22,19 +22,19 @@ const config = {
   ],
   carouselSlides: [
     {
-      src: "images/foto-1.jpg",
+      src: "images/recuerdo-1.svg",
       caption: "Por todas las veces que tu sonrisa hizo que el día se sintiera más bonito."
     },
     {
-      src: "images/foto-3.jpg",
+      src: "images/recuerdo-3.svg",
       caption: "Por esos momentos sencillos que, contigo, se vuelven recuerdos enormes."
     },
     {
-      src: "images/foto-2.jpg",
+      src: "images/recuerdo-2.svg",
       caption: "Por la forma tan especial en la que dejas luz donde pasas."
     },
     {
-      src: "images/foto-4.jpg",
+      src: "images/recuerdo-4.svg",
       caption: "Por los momentos que se hacen eternos y la necesidad de para el timepo para que no termine."
     }
   ]
